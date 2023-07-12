@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 21:11:08 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/12 21:38:27 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int ft_strlcpy(char *dest, char *src, int sizeDest);
 size_t		ft_strlen(const char *s);
 int ft_toupper(int a);
 int ft_toupper(int a);
+char *ft_strchr(const char *str, int a);
 
 #endif
