@@ -6,7 +6,7 @@
 #    By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/12 17:21:29 by sbuker            #+#    #+#              #
-#    Updated: 2023/07/12 19:42:50 by sbuker           ###   ########.fr        #
+#    Updated: 2023/07/12 20:40:37 by sbuker           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,6 @@ CFLAGS = -Wall -Wextra -Werror
 .PHONY: all clean fclean re
 
 all: $(NAME)
-
-copy:
-	cp -f libc-funcs/*.c .
-	cp -f additional-funcs/*.c .
-	cp -f bonus-funcs/*.c .
-	cp -f personal-funcs/*.c .
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
