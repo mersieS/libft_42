@@ -6,12 +6,11 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:20:16 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 20:10:11 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/12 20:19:17 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t ft_strlcat(char *dest, const char *src, size_t size){
     size_t i;
@@ -33,13 +32,4 @@ size_t ft_strlcat(char *dest, const char *src, size_t size){
         *(dest + i) = '\0';
     }
     return (dest_len + src_len);
-}
-
-int main(){
-    char str1[20] = "wor";
-    char str2[] = "hedds";
-
-    ft_strlcat(str1, str2, sizeof(str1));
-
-    printf("%s, %s", str1, str2);
 }
