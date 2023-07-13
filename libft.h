@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/13 16:55:27 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/13 17:36:42 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int ft_toupper(int a);
 char *ft_strchr(const char *str, int a);
 char *ft_strrchr(const char *str, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
+void *ft_memchr(const void *ptr, int value, size_t num);
 
 #endif
