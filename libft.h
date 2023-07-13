@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/13 19:30:01 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/13 20:46:43 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *ptr, int value, size_t num);
 int ft_memcmp(const void *str1, const void *str2, size_t num);
 char *strnstr(const char *hs, const char *nd, size_t len);
+int atoi(const char *str);
 
 #endif

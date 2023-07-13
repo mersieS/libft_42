@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 19:27:52 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/13 20:14:17 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/13 20:42:14 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ char *ft_strnstr(const char *hs, const char *nd, size_t len){
     if(hs_len < nd_len)
         return (NULL);
 
-    while(*(hs + i) != '\0' && *(nd + j) != '\0'){
+    while((*(hs + i) != '\0' && *(nd + j) != '\0') 
+        && (i < hs_len)){
         if(*((const char *)hs + i) == *((const char *)nd + j))
             j++;
         if(j == 0)
