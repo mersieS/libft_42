@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/15 16:52:53 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/15 17:39:09 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void *ft_memchr(const void *ptr, int value, size_t num);
 int ft_memcmp(const void *str1, const void *str2, size_t num);
 char *strnstr(const char *hs, const char *nd, size_t len);
 int ft_atoi(const char *str);
+void *ft_calloc(size_t num, size_t size);
 
 #endif
