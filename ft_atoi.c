@@ -6,32 +6,33 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 20:45:29 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/13 21:36:47 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/15 16:46:26 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_atoi(const char *str){
-    int i;
-    int a;
-    int arr[20];
+int		ft_atoi(const char *str)
+{
+	int		i;
+	int		num;
+	int		sign;
 
-    i = 0;
-
-    while((*(str + i)) != '\0'){
-        a = *(str+i);
-        if(a >=  48 && a <= 57){
-            a -= 48;
-            arr[i] = a;
-        }
-        i++;
-    }
-    return (arr);
-}
-
-int main(){
-  const char *str = "12345";
-int sayi = ft_atoi(str);
-printf("Dönüştürülen sayı: %d\n", sayi);  
+	i = 0;
+	num = 0;
+	sign = 1;
+	while (*(str + i) == '\n' ||
+		*(str + i) == '\t' ||
+		*(str + i) == '\r' ||
+		*(str + i) == '\v' ||
+		*(str + i) == '\f' ||
+		*(str + i) == ' ')
+		i++;
+	if (*(str + i) == '-')
+		sign = -1;
+	if (*(str + i) == '-' || *(str + i) == '+')
+		i++;
+	while (*(str + i) && *(str + i) >= '0' && *(str + i) <= '9')
+		num = num * 10 + (*(str + i++) - '0');
+	return (num * sign);
 }
