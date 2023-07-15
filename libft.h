@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/15 19:51:20 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/15 20:54:00 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ int ft_atoi(const char *str);
 void *ft_calloc(size_t num, size_t size);
 char *ft_strdup(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif
