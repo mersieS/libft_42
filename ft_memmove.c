@@ -6,9 +6,11 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:09 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 17:21:45 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/16 02:29:47 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void *ft_memmove(void *d, void *s, int sizeSrc){
     unsigned char *dest = (unsigned char*) d;

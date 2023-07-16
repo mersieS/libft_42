@@ -6,9 +6,11 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:20:23 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 17:20:46 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/16 02:29:11 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_bzero(void *s, int size){
     char *str = (char *)s;

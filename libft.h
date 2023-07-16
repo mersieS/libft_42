@@ -6,7 +6,7 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 01:11:07 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/16 01:18:45 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strncpy(char *dest, const char *src, size_t n);
 char *ft_strjoin(char const *s1, char const *s2);
 char	*ft_strcat(char *s1, const char *s2);
+char *ft_strtrim(char const *s1, char const *set);
 
 #endif

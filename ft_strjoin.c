@@ -6,12 +6,11 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 22:10:14 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 01:16:44 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/16 02:29:59 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char *ft_strjoin(char const *s1, char const *s2){
     size_t s1_len = ft_strlen(s1);
