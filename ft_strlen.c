@@ -6,18 +6,17 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:18 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 03:03:01 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/17 09:29:29 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t		i;
 
 	i = -1;
 	while (*(s + ++i));
-	
 	return (i);
 }
