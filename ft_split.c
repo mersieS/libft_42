@@ -9,7 +9,6 @@
 /*   Updated: 2023/07/16 23:34:13 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include "libft.h"
 
 char *newstr(size_t size){
