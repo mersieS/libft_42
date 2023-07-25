@@ -13,11 +13,3 @@ void ft_putendl_fd(char *s, int fd){
     char newline = '\n';
     write(fd, &newline, 1);
 }
-
-int main(){
-    char *str = "Hello World";
-    int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-
-    ft_putendl_fd(str, fd);
-    close(fd);
-}
