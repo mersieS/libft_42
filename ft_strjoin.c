@@ -5,25 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 22:10:14 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 02:29:59 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:37:12 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:37:16 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2){
-    size_t s1_len = ft_strlen(s1);
-    size_t s2_len = ft_strlen(s2);
-    
-    char *str = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*ptr;
+	size_t	i;
 
-    if(s1 == NULL || s2 == NULL){
-        return NULL;
-    }
-
-    ft_strcpy(str, s1);
-    ft_strcat(str, s2);
-
-    return str;
+	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s1 || !s2 || !ptr)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	ft_strlcpy(ptr + i, s2, ft_strlen(s2) + 1);
+	return (ptr);
 }

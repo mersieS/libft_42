@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 16:57:32 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/22 17:10:47 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:32:42 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:33:38 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *ptr, int value, size_t num)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*sc;
-	size_t		i;
+	const unsigned char	*p;
+	size_t				i;
 
-	sc = (const char *)ptr;
-	i = -1;
-	while (++i < num)
+	p = s;
+	i = 0;
+	while (i < n)
 	{
-		if (*(sc + i) == (char)value)
-			return ((void *)sc + i); 
+		if (p[i] == (unsigned char)c)
+		{
+			return ((void *)(p + i));
+		}
+		i++;
 	}
 	return (NULL);
 }

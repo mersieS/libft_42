@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 15:40:56 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 23:44:55 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:39:10 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:39:12 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
+	char	*p;
 
-	i = (int)ft_strlen(s) + 1;
-	while (i--)
-		if (*(s + i) == (char)c)
-			return ((char *)s + i);
-	return (NULL);
+	i = 0;
+	p = NULL;
+	while (1)
+	{
+		if (s[i] == (char)c)
+			p = (char *)(s + i);
+		if (s[i] == '\0')
+			break ;
+		i++;
+	}
+	return (p);
 }

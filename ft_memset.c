@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 17:21:12 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/22 19:35:51 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:34:19 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:34:24 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int value, int size)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int				i;
-	unsigned char	*str;
+	char	*str;
+	size_t	i;
 
-	str = (unsigned char *)s;
+	str = (char *)b;
 	i = 0;
-	while (i < size)
+	while (i < len)
 	{
-		str[i] = (unsigned char)value;
+		str[i] = c;
 		i++;
 	}
-	return (s);
+	return (b);
 }

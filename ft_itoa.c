@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 15:46:49 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/25 15:47:22 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:32:04 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:33:31 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 static int	numbercount(int n)
 {

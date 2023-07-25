@@ -5,23 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 17:20:23 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/22 16:40:43 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:31:31 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:32:59 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int size)
+void	ft_bzero(void *s, size_t n)
 {
-	int		i;
-	char	*str;
-
-	str = (char *)s;
-	i = 0;
-	while (i < size)
-	{
-		str[i] = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }

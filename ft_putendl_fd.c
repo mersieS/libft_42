@@ -1,15 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/25 16:36:10 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:36:13 by sbuker           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <fcntl.h>
 
-void ft_putendl_fd(char *s, int fd){
-    if(fd < 0)
-        return;
-    
-    while (*s != '\0'){
-        write(fd, s, 1);
-        s++;
-    }
+void	ft_putendl_fd(char *s, int fd)
+{
+	size_t	i;
 
-    char newline = '\n';
-    write(fd, &newline, 1);
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+		ft_putchar_fd(s[i++], fd);
+	ft_putchar_fd('\n', fd);
 }

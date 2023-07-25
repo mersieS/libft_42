@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 21:08:28 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/25 14:33:55 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:39:25 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:39:27 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int a){
-    if(a >= 65 && a <= 90)
-        return (a + 32);
-    return (a);
+int	ft_tolower(int a)
+{
+	if (a >= 'A' && a <= 'Z')
+		return (a + 32);
+	else
+		return (a);
 }

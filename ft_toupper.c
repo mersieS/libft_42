@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 20:40:49 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 21:09:24 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:39:30 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:39:33 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int a){
-    if(a >= 97 && a <= 122)
-        return (a - 32);
-    return (a);
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else
+		return (c);
 }

@@ -5,21 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 21:24:25 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/12 21:40:46 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:36:30 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:36:32 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str, int a){
-    int i;
-    i = -1;
-    while (++i < (int)ft_strlen(str) + 1){
-        if(*(str + i) == (char)a){
-            return((char *)str + i);
-        }
-    }
-    return (NULL);
-    
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

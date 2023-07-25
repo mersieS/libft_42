@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 17:20:53 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/22 17:02:41 by sbuker           ###   ########.fr       */
+/*   Created: 2023/07/25 16:31:40 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:33:03 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char ch)
+int	ft_isalnum(int str)
 {
-	if ((ch >= 48 && ch <= 57) || 
-		(ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
+	if ((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z') || (str >= '0'
+			&& str <= '9'))
 		return (1);
 	else
 		return (0);
