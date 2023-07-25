@@ -6,25 +6,39 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 20:45:29 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/15 16:46:26 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/25 15:41:43 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+static int	my_isspace(char c)
 {
-    int result = 0;
-    int sign = 1;
-    
-    while (*str == ' ')
-        str++;
+	if (c == '\t' || c == '\n' || c == '\r')
+		return (1);
+	else if (c == '\f' || c == '\v' || c == ' ')
+		return (1);
+	else
+		return (0);
+}
 
-    if (*str == '+' || *str == '-')
-        sign = (*str++ == '-') ? -1 : 1;
+int	ft_atoi(const char *str)
+{
+	int	res;
+	int	negative;
 
-    while (ft_isdigit(*str))
-        result = result * 10 + (*str++ - '0');
-
-    return result * sign;
+	negative = 1;
+	res = 0;
+	while (my_isspace(*str))
+		str++;
+	if (*str == '-')
+	{
+		negative = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+		res = (res * 10) + (*str++ - 48);
+	return (negative * res);
 }

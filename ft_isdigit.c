@@ -6,16 +6,16 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:02 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 02:29:32 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/25 16:03:37 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(char ch) {
-    if (ch >=  48 && ch <= 57) {
-        return 1;
-    } else {
-        return 0;
-    }
+int	ft_isdigit(int str)
+{
+	if (str >= '0' && str <= '9')
+		return (1);
+	return (0);
 }
+

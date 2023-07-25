@@ -1,63 +1,72 @@
-#include  "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/25 15:46:49 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 15:47:22 by sbuker           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static void reverse(char *str, int length){
-    char *start;
-    char *end;
-    char temp;
 
-    start = str;
-    end = str + length - 1;
-    while (start < end){
-        temp = *start;
-        *start = *end;
-        *end = temp;
-        start++;
-        end--;
-    }
+static int	numbercount(int n)
+{
+	int	count;
+
+	count = 0;
+	if (n > 0)
+		count = 0;
+	else if (n < 0 || n == 0)
+		count = 1;
+	while (n)
+	{
+		count++;
+		n /= 10;
+	}
+	return (count);
 }
 
-char *ft_itoa(int num){
-    int is_negative;
-    
-    if(num < 0){
-        is_negative = 1;
-        num = -num;
-    }
+static char	itoa_next(int n1)
+{
+	char	convert1[1];
 
-    int num_digits;
-    int temp;
-    
-    num_digits = (num == 0) ? 1 : 0;
-    temp = num;
-    while (temp != 0)
-    {
-        num_digits++;
-        temp /= 10;
-    }
+	if (n1 == 0)
+		convert1[0] = '-';
+	if (n1 < 0)
+	{
+		convert1[0] = -(n1 % 10) + '0';
+	}
+	else if (n1 > 0)
+	{
+		convert1[0] = (n1 % 10) + '0';
+	}
+	return (*convert1);
+}
 
-    char *str;
-    
-    str = (char *)malloc((num_digits + 1 + is_negative) * sizeof(char));
-    if(str == NULL)
-        return(NULL);
+char	*ft_itoa(int n)
+{
+	char	*convert;
+	int		len;
+	int		rule;
 
-    char *p;
-    int remind;
-    
-    p = str;
-    while (num != 0){
-        remind = num % 10;
-        *p++ = '0' + remind;
-        num /= 10;
-    }
-
-    if (is_negative){
-        *p++ = '-';
-    }
-
-    *p = '\0';
-
-    reverse(str, num_digits + is_negative);
-    return (str);
+	len = numbercount(n);
+	convert = malloc(sizeof (char) * len + 1);
+	if (!convert)
+		return (NULL);
+	if (n == 0)
+	{
+		convert[0] = '0';
+		convert[len] = '\0';
+		return (convert);
+	}
+	convert[len] = '\0';
+	rule = numbercount(n);
+	while (rule-- != 0)
+	{
+		convert[len-- - 1] = itoa_next(n);
+		n = (n / 10);
+	}
+	return (convert);
 }

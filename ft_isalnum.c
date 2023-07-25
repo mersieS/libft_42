@@ -6,16 +6,17 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:20:53 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 02:29:21 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/22 17:02:41 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(char ch) {
-    if ((ch >=  48 && ch <= 57) || (ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) {
-        return 1;
-    } else {
-        return 0;
-    }
+int	ft_isalnum(char ch)
+{
+	if ((ch >= 48 && ch <= 57) || 
+		(ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
+		return (1);
+	else
+		return (0);
 }

@@ -2,6 +2,12 @@
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "string.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "sstream": "c",
+        "cstdlib": "c",
+        "locale": "c",
+        "ostream": "c",
+        "new": "c",
+        "__locale": "c"
     }
 }

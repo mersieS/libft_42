@@ -1,36 +1,36 @@
-#include "libft.h"
-#include <fcntl.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/25 15:44:42 by sbuker            #+#    #+#             */
+/*   Updated: 2023/07/25 16:12:13 by sbuker           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static void rev(char buf[], char *ptr, int fd){
-    while (ptr > buf){
-        ptr--;
-        ft_putchar_fd(*ptr, fd);
-    }
-}
 
-void ft_putnbr_fd(int n, int fd){
-    char buf[10];
-    char *ptr;
-    int is_negative;
-
-    ptr = buf;
-    is_negative = 0;
-
-    if(n < 0){
-        is_negative = 1;
-        n = -n;
-    }
-
-    while(n > 0){
-        *ptr = '0' + (n % 10);
-        n /= 10;
-        ptr++;
-    }
-
-    if(is_negative){
-        *ptr = '-';
-         ptr++;
-    }
-
-    rev(buf, ptr, fd);
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(214748364, fd);
+		ft_putchar_fd('8', fd);
+	}
+	else if (n >= 0 && n < 10)
+	{
+		ft_putchar_fd((n + '0'), fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10 + '0'), fd);
+	}
+	else
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd((n * -1), fd);
+	}
 }

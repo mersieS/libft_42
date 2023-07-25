@@ -6,16 +6,18 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:20:56 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 02:29:25 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/25 16:03:28 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(char ch) {
-    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) {
-        return 1;
-    } else {
-        return 0;
-    }
+int	ft_isalpha(int str)
+{
+	if (str >= 'a' && str <= 'z')
+		return (1);
+	else if (str >= 'A' && str <= 'Z')
+		return (1);
+	else
+		return (0);
 }

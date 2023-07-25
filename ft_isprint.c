@@ -6,16 +6,16 @@
 /*   By: sbuker <sbuker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:21:04 by sbuker            #+#    #+#             */
-/*   Updated: 2023/07/16 02:29:36 by sbuker           ###   ########.fr       */
+/*   Updated: 2023/07/25 16:03:12 by sbuker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(char ch) {
-    if (ch >= 32 && ch <= 126) {
-        return 1;
-    } else {
-        return 0;
-    }
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
